@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Metatags Principais -->
+  <title>GGEASY // Hub Oficial</title>
+  <meta name="title" content="GGEASY // Hub Oficial">
+  <meta name="description" content="Streamer oficial de Free Fire. Acesse as transmissões ao vivo, apoie via LivePIX, entre no grupo VIP e confira os links oficiais.">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Open Graph / WhatsApp / Facebook / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ggeasy.com.br/">
+  <meta property="og:title" content="GGEASY // Hub Oficial">
+  <meta property="og:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
+  <meta property="og:image" content="assets/banner.jpg">
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ggeasy.com.br/">
+  <meta property="twitter:title" content="GGEASY // Hub Oficial">
+  <meta property="twitter:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
+  <meta property="twitter:image" content="assets/banner.jpg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#05070c',
+              surface: '#0c111a',
+              surfaceHover: '#131b29',
+              border: '#192438',
+              primary: '#0ea5e9',
+              muted: '#8b9bb4'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #05070c;
+    }
+    
+    .neon-pill {
+      box-shadow: 0 0 25px rgba(14, 165, 233, 0.25), 0 0 10px rgba(14, 165, 233, 0.15), inset 0 0 12px rgba(14, 165, 233, 0.1);
+      border-color: rgba(14, 165, 233, 0.5);
+    }
+    .neon-icon {
+      filter: drop-shadow(0 0 8px #38bdf8) drop-shadow(0 0 16px #0ea5e9);
+    }
+    .neon-blue {
+      text-shadow: 0 0 12px rgba(56, 189, 248, 0.65);
+    }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #05070c; }
+    ::-webkit-scrollbar-thumb { background: #192438; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+  </style>
+</head>
+<body class="text-slate-100 min-h-screen pb-12 antialiased selection:bg-sky-500 selection:text-black">
+
+  <!-- Header Flutuante com Ícone Aleatório -->
+  <header class="sticky top-3 z-50 flex justify-center px-4">
+    <div class="neon-pill bg-brand-surface/85 border backdrop-blur-xl px-5 py-1.5 rounded-full flex items-center gap-2.5 transition duration-300">
+      
+      <!-- Ícone Sorteado Dinamicamente -->
+      <i id="random-badge-icon" class="fa-solid fa-gamepad text-sky-400 text-sm neon-icon animate-pulse"></i>
+
+      <span class="font-extrabold tracking-widest text-xs uppercase text-slate-100">
+        <span class="text-sky-400 neon-blue">GG</span>EASY
+      </span>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 mt-5">
+
+    <!-- Card Principal de Perfil com Background Personalizado -->
+    <section class="relative rounded-3xl overflow-hidden border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-2xl">
+      
+      <!-- Imagem de Fundo (Background Banner) com Overlay Suave -->
+      <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('assets/banner.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-surface/80 via-brand-bg/90 to-brand-surface"></div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center">
+        
+        <!-- Foto de Perfil Oficial (Dentro da pasta assets/) -->
+        <div class="relative mb-4">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-sky-400 via-blue-600 to-cyan-300 shadow-2xl shadow-sky-950/80">
+            <img src="assets/logo.png" alt="GGEASY" class="w-full h-full object-cover rounded-full bg-slate-900">
+          </div>
+        </div>
+
+        <!-- Identidade Centralizada Milimetricamente com Badge Flutuante -->
+        <div class="relative inline-flex items-center justify-center">
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white uppercase text-center">
+            <span class="text-sky-400 neon-blue">GG</span>EASY
+          </h1>
+          <i class="fa-solid fa-circle-check text-sky-400 text-base absolute -right-6 top-1/2 -translate-y-1/2" title="Verificado Oficial"></i>
+        </div>
+
+        <!-- Origem / Localização Centralizada -->
+        <div class="flex justify-center items-center gap-1 mt-1.5 text-xs text-slate-300 font-medium">
+          <i class="fa-solid fa-location-dot text-sky-400 text-[10px]"></i>
+          <span>João Pessoa, PB</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 max-w-md mt-2.5 leading-relaxed">
+          Streamer e influenciador oficial de Free Fire, eleito Melhor Streamer da Galera.
+        </p>
+
+        <!-- Redes Sociais Rápidas (Apenas os 4 Principais) -->
+        <div class="flex justify-center gap-2.5 mt-5">
+          <a href="https://instagram.com" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-pink-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-red-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-black hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://livepix.gg" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-teal-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+            <i class="fa-solid fa-qrcode"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Navegação por Abas (Clean: Apenas Links e Sobre) -->
+    <div class="flex justify-center sm:justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
+      <button onclick="switchTab('links')" id="tab-btn-links" class="px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0">
+        <i class="fa-solid fa-link mr-2 text-sky-400"></i> Links
+      </button>
+      <button onclick="switchTab('about')" id="tab-btn-about" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
+        <i class="fa-solid fa-user mr-2 text-sky-400"></i> Sobre
+      </button>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div class="mt-6">
+
+      <!-- ABA 1: LINKS -->
+      <section id="content-links" class="space-y-4">
+        
+        <!-- SEÇÃO 1: TRANSMISSÕES & APOIO -->
+        <div class="space-y-2.5">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-tower-broadcast text-[10px]"></i> AO VIVO & APOIO
+          </span>
+
+          <!-- LivePIX -->
+          <a href="https://livepix.gg/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-teal-500/60 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-lg group-hover:scale-105 transition flex-shrink-0">
+                <i class="fa-solid fa-qrcode"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-teal-400 transition block">
+                  APOIAR O GGEASY (LIVEPIX)
+                </span>
+                <span class="text-[11px] text-brand-muted block mt-0.5">
+                  Mande sua mensagem e apareça ao vivo na live!
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Canal Youtube (Live) -->
+          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">CANAL YOUTUBE (LIVES)</span>
+            </div>
+          </a>
+
+          <!-- TikTok (Live) -->
+          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">TIKTOK (LIVES & CORTES)</span>
+            </div>
+          </a>
+
+          <!-- Twitch -->
+          <a href="https://www.twitch.tv/ggeasyup" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-twitch"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">CANAL TWITCH</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- SEÇÃO 2: REDES SOCIAIS OFICIAIS -->
+        <div class="space-y-2.5 pt-1">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-user-plus text-[10px]"></i> REDES SOCIAIS OFICIAIS
+          </span>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">INSTAGRAM</span>
+            </div>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/GGeasyOFC/" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">FACEBOOK</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- SEÇÃO 3: COMUNIDADE & AVISOS -->
+        <div class="space-y-2.5 pt-1">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-users text-[10px]"></i> COMUNIDADE & AVISOS
+          </span>
+
+          <!-- Membro YouTube -->
+          <a href="https://www.youtube.com/channel/UCDUYrtxBX6EXyP5fVLkuJNg/join" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-solid fa-crown text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">MEMBRO YOUTUBE</span>
+            </div>
+          </a>
+
+          <!-- WhatsApp (GRUPO) -->
+          <a href="https://chat.whatsapp.com/ESToK8oNT874OR33olNTNv?s=cl&p=i&mlu=4" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">WHATSAPP (GRUPO)</span>
+            </div>
+          </a>
+
+          <!-- Discord Oficial -->
+          <a href="https://discord.com/invite/SxsAQydnnH" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-discord"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">DISCORD OFICIAL</span>
+            </div>
+          </a>
+
+          <!-- Canal do Telegram -->
+          <a href="https://t.me/+rsQ-f7_6i5tlMjhh" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">CANAL DO TELEGRAM</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- SEÇÃO 4: DOWNLOADS & CONTATO -->
+        <div class="space-y-2.5 pt-1">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+            <i class="fa-solid fa-download text-[10px]"></i> DOWNLOADS & COMERCIAL
+          </span>
+
+          <!-- MEU EMULADOR (MSI) -->
+          <a href="https://drive.google.com/file/d/1cBzQyk6X4p7d1girqyRIVbmzcf60OMgf/view" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-solid fa-gamepad text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">MEU EMULADOR (MSI)</span>
+            </div>
+          </a>
+
+          <!-- E-mail Contato -->
+          <a href="mailto:ramonggramalho@yahoo.com" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-105 transition">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <span class="text-xs font-bold text-white lowercase group-hover:text-sky-400 transition">ramonggramalho@yahoo.com</span>
+            </div>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- ABA 2: SOBRE -->
+      <section id="content-about" class="hidden">
+        <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-7 space-y-6">
+          
+          <div class="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p>
+              Natural de João Pessoa (PB), <strong class="text-white">Ramon Ramalho</strong> é um dos pioneiros e maiores influenciadores do cenário brasileiro de Free Fire.
+            </p>
+            <p>
+              Fundou a histórica equipe <strong class="text-sky-400">New X Gaming</strong>, onde conquistou o título da <strong class="text-white">Pro League Season 2</strong> em 2019, consolidando uma trajetória marcante no entretenimento digital e streaming.
+            </p>
+          </div>
+
+          <div class="pt-5 border-t border-brand-border/60">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-muted block mb-3">Marcos na Carreira</span>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              
+              <div class="p-3.5 bg-brand-bg/90 border border-brand-border rounded-2xl flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-400 flex-shrink-0">
+                  <i class="fa-solid fa-trophy text-sm"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-white block leading-tight">Campeão Nacional</span>
+                  <span class="text-[11px] text-brand-muted block mt-0.5">Pro League Season 2 (2019)</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-brand-bg/90 border border-brand-border rounded-2xl flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/25 flex items-center justify-center text-sky-400 flex-shrink-0">
+                  <i class="fa-solid fa-award text-sm"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-bold text-white block leading-tight">Streamer da Galera</span>
+                  <span class="text-[11px] text-brand-muted block mt-0.5">Prêmio Booyah Awards (2021)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="mt-12 pt-6 border-t border-brand-border/50 text-center flex flex-col items-center gap-1 text-xs text-brand-muted">
+      <span class="font-medium tracking-wide">Ramon "<span class="text-sky-400">GG</span>easy" Ramalho</span>
+      <span class="text-[11px] text-brand-muted/60">© 2026 • Todos os direitos reservados</span>
+    </footer>
+
+  </main>
+
+  <!-- Script das Abas e Sorteio do Ícone -->
+  <script>
+    function switchTab(tabName) {
+      const tabs = ['links', 'about'];
+      
+      tabs.forEach(t => {
+        const contentEl = document.getElementById(`content-${t}`);
+        const btnEl = document.getElementById(`tab-btn-${t}`);
+        
+        if (t === tabName) {
+          contentEl.classList.remove('hidden');
+          btnEl.className = 'px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0';
+        } else {
+          contentEl.classList.add('hidden');
+          btnEl.className = 'px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0';
+        }
+      });
+    }
+
+    // Lista exclusiva: Ícones de Jogos de PC & Free Fire / Esports
+    const randomIcons = [
+      "fa-solid fa-gamepad",        // Controle Gamer
+      "fa-solid fa-fire",           // Fogo / Free Fire
+      "fa-solid fa-crosshairs",     // Mira / FPS / Capa
+      "fa-solid fa-skull",          // Caveira / Kill / Abate
+      "fa-solid fa-trophy",         // Troféu / Campeão Pro League
+      "fa-solid fa-desktop",        // PC Gamer / Emulador
+      "fa-solid fa-keyboard",       // Teclado Gamer
+      "fa-solid fa-crown",          // Coroa / Booyah!
+      "fa-solid fa-headset",        // Headset de Comunicação
+      "fa-solid fa-shield-halved"   // Escudo / Colete / Guilda
+    ];
+
+    // Sorteia um ícone temático a cada atualização de página (F5)
+    const iconElement = document.getElementById("random-badge-icon");
+    if (iconElement) {
+      const chosenIcon = randomIcons[Math.floor(Math.random() * randomIcons.length)];
+      iconElement.className = `${chosenIcon} text-sky-400 text-sm neon-icon animate-pulse`;
+    }
+  </script>
+
+</body>
+</html>
