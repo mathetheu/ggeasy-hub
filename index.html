@@ -4,30 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Metatags Principais -->
-  <title>GGEASY - Hub Oficial</title>
+  <!-- Favicon com o GG azul neon (SVG vetorial limpo, sem cortes) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='%2338bdf8'><path d='M44 32C44 23.16 36.84 16 28 16H20C11.16 16 4 23.16 4 32V68C4 76.84 11.16 84 20 84H28C36.84 84 44 76.84 44 68V50H26V60H32V70C32 71.1 31.1 72 30 72H18C16.9 72 16 71.1 16 70V30C16 28.9 16.9 28 18 28H30C31.1 28 32 28.9 32 30V36H44V32Z'/><path d='M96 32C96 23.16 88.84 16 80 16H72C63.16 16 56 23.16 56 32V68C56 76.84 63.16 84 72 84H80C88.84 84 96 76.84 96 68V50H78V60H84V70C84 71.1 83.1 72 82 72H70C68.9 72 68 71.1 68 70V30C68 28.9 68.9 28 70 28H82C83.1 28 84 28.9 84 30V36H96V32Z'/></g></svg>">
+  
+  <!-- Título e dados de busca -->
+  <title>GGEASY // Hub Oficial</title>
   <meta name="title" content="GGEASY // Hub Oficial">
   <meta name="description" content="Streamer oficial de Free Fire. Acesse as transmissões ao vivo, apoie via LivePIX, entre no grupo VIP e confira os links oficiais.">
   <meta name="theme-color" content="#0ea5e9">
 
-  <!-- Open Graph / WhatsApp / Facebook / Instagram -->
+  <!-- Prévia para compartilhamento no WhatsApp, Insta e Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ggeasy.com.br/">
   <meta property="og:title" content="GGEASY // Hub Oficial">
   <meta property="og:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
   <meta property="og:image" content="assets/banner.jpg">
 
-  <!-- Twitter / X -->
+  <!-- Prévia para Twitter / X -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ggeasy.com.br/">
   <meta property="twitter:title" content="GGEASY // Hub Oficial">
   <meta property="twitter:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
   <meta property="twitter:image" content="assets/banner.jpg">
   
+  <!-- Scripts de estilo e fontes -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Paleta personalizada no Tailwind -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -48,6 +53,7 @@
     }
   </script>
 
+  <!-- Efeitos visuais: neon suave e barra de rolagem -->
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -73,11 +79,11 @@
 </head>
 <body class="text-slate-100 min-h-screen pb-12 antialiased selection:bg-sky-500 selection:text-black">
 
-  <!-- Header Flutuante com Ícone Aleatório -->
+  <!-- Tag flutuante com ícone aleatório no topo -->
   <header class="sticky top-3 z-50 flex justify-center px-4">
     <div class="neon-pill bg-brand-surface/85 border backdrop-blur-xl px-5 py-1.5 rounded-full flex items-center gap-2.5 transition duration-300">
       
-      <!-- Ícone Sorteado Dinamicamente -->
+      <!-- O ícone muda a cada F5 através do JavaScript -->
       <i id="random-badge-icon" class="fa-solid fa-gamepad text-sky-400 text-sm neon-icon animate-pulse"></i>
 
       <span class="font-extrabold tracking-widest text-xs uppercase text-slate-100">
@@ -88,23 +94,23 @@
 
   <main class="max-w-4xl mx-auto px-4 mt-5">
 
-    <!-- Card Principal de Perfil com Background Personalizado -->
+    <!-- Card principal de apresentação -->
     <section class="relative rounded-3xl overflow-hidden border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-2xl">
       
-      <!-- Imagem de Fundo (Background Banner) com Overlay Suave -->
+      <!-- Banner de fundo com sobreposição sutil -->
       <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('assets/banner.jpg');"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-brand-surface/80 via-brand-bg/90 to-brand-surface"></div>
       
       <div class="relative z-10 flex flex-col items-center text-center">
         
-        <!-- Foto de Perfil Oficial (Dentro da pasta assets/) -->
+        <!-- Foto de perfil com aro neon -->
         <div class="relative mb-4">
           <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-sky-400 via-blue-600 to-cyan-300 shadow-2xl shadow-sky-950/80">
             <img src="assets/logo.png" alt="GGEASY" class="w-full h-full object-cover rounded-full bg-slate-900">
           </div>
         </div>
 
-        <!-- Identidade Centralizada Milimetricamente com Badge Flutuante -->
+        <!-- Nome e badge de verificado -->
         <div class="relative inline-flex items-center justify-center">
           <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white uppercase text-center">
             <span class="text-sky-400 neon-blue">GG</span>EASY
@@ -112,22 +118,23 @@
           <i class="fa-solid fa-circle-check text-sky-400 text-base absolute -right-6 top-1/2 -translate-y-1/2" title="Verificado Oficial"></i>
         </div>
 
-        <!-- Origem / Localização Centralizada -->
+        <!-- Cidade e Estado -->
         <div class="flex justify-center items-center gap-1 mt-1.5 text-xs text-slate-300 font-medium">
           <i class="fa-solid fa-location-dot text-sky-400 text-[10px]"></i>
           <span>João Pessoa, PB</span>
         </div>
 
+        <!-- Bio rápida -->
         <p class="text-xs sm:text-sm text-slate-300 max-w-md mt-2.5 leading-relaxed">
           Streamer e influenciador oficial de Free Fire, eleito Melhor Streamer da Galera.
         </p>
 
-        <!-- Redes Sociais Rápidas (Apenas os 4 Principais) -->
+        <!-- Acessos rápidos às 4 redes principais -->
         <div class="flex justify-center gap-2.5 mt-5">
           <a href="https://www.instagram.com/ggeasy" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-pink-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.youtube.com/GGeasyYT" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-red-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-red-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
             <i class="fa-brands fa-youtube"></i>
           </a>
           <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-black hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
@@ -141,7 +148,7 @@
       </div>
     </section>
 
-    <!-- Navegação por Abas (Clean: Apenas Links e Sobre) -->
+    <!-- Menu de navegação por abas -->
     <div class="flex justify-center sm:justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
       <button onclick="switchTab('links')" id="tab-btn-links" class="px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0">
         <i class="fa-solid fa-link mr-2 text-sky-400"></i> Links
@@ -151,19 +158,19 @@
       </button>
     </div>
 
-    <!-- Conteúdo das Abas -->
+    <!-- Área de conteúdo das abas -->
     <div class="mt-6">
 
-      <!-- ABA 1: LINKS -->
+      <!-- ================= ABA 1: TODOS OS LINKS ================= -->
       <section id="content-links" class="space-y-4">
         
-        <!-- SEÇÃO 1: TRANSMISSÕES & APOIO -->
+        <!-- Lives e Plataformas de Apoio -->
         <div class="space-y-2.5">
           <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-tower-broadcast text-[10px]"></i> AO VIVO & APOIO
           </span>
 
-          <!-- LivePIX -->
+          <!-- LivePIX (Hover Teal) -->
           <a href="https://livepix.gg/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-teal-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-lg group-hover:scale-105 transition flex-shrink-0">
@@ -180,104 +187,129 @@
             </div>
           </a>
 
-          <!-- Canal Youtube (Live) -->
-          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Canal YouTube Lives (Hover Red) -->
+          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-red-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-youtube"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">CANAL YOUTUBE (LIVES)</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-red-400 transition">CANAL YOUTUBE (LIVES)</span>
             </div>
           </a>
 
-          <!-- TikTok (Live) -->
-          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- TikTok Lives & Cortes (Hover White) -->
+          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-white/50 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-tiktok"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">TIKTOK (LIVES & CORTES)</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-white transition">TIKTOK (LIVES & CORTES)</span>
             </div>
           </a>
 
-          <!-- Twitch -->
-          <a href="https://www.twitch.tv/ggeasyup" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Canal Twitch (Hover Purple) -->
+          <a href="https://www.twitch.tv/ggeasyup" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#9146ff]/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-[#9146ff]/10 border border-[#9146ff]/30 flex items-center justify-center text-[#bf94ff] text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-twitch"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">CANAL TWITCH</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-[#bf94ff] transition">CANAL TWITCH</span>
+            </div>
+          </a>
+
+          <!-- Canal Kick (Hover Neon Green) -->
+          <a href="https://kick.com/ggeasyofc" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#53fc18]/60 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-[#53fc18]/10 border border-[#53fc18]/30 flex items-center justify-center group-hover:scale-105 transition flex-shrink-0 p-2">
+                <svg viewBox="0 0 24 24" fill="#53fc18" class="w-5 h-5">
+                  <path d="M1.333 0h8v5.333H6.667v2.668h2.666v2.666H12V8.001h2.667V5.333H12V0h8.001v8.001h-2.667v2.666H14.667v2.666h2.667V16H20v8h-8.001v-5.333h2.668v-2.668H12v-2.666H9.333v2.666H6.667V18.67h2.666V24H1.333V0z"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-[#53fc18] transition">CANAL KICK</span>
+            </div>
+          </a>
+
+          <!-- Kwai Lives & Vídeos (Hover Orange) -->
+          <a href="https://www.kwai.com/@GGeasyOFC" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#ff5000]/60 p-3.5 rounded-2xl flex items-center transition group">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-[#ff5000]/10 border border-[#ff5000]/30 flex items-center justify-center text-[#ff5000] group-hover:scale-105 transition flex-shrink-0 p-2">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93A5.99 5.99 0 0 0 6 15.5C6 19.09 8.91 22 12.5 22s6.5-2.91 6.5-6.5c0-2.45-1.35-4.59-3.35-5.65.23-.42.35-.89.35-1.35a4 4 0 0 0-4-4zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm.5 9.5c2.49 0 4.5 2.01 4.5 4.5S14.99 22.5 12.5 22.5 8 20.49 8 18s2.01-4.5 4.5-4.5z"/>
+                  <circle cx="12.5" cy="18" r="2.5"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-[#ff5000] transition">KWAI (LIVES & VÍDEOS)</span>
             </div>
           </a>
         </div>
 
-        <!-- SEÇÃO 2: REDES SOCIAIS OFICIAIS -->
+        <!-- Redes Sociais Oficiais -->
         <div class="space-y-2.5 pt-1">
           <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-user-plus text-[10px]"></i> REDES SOCIAIS OFICIAIS
           </span>
 
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Instagram (Hover Pink) -->
+          <a href="https://www.instagram.com/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-pink-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-instagram"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">INSTAGRAM</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-pink-400 transition">INSTAGRAM</span>
             </div>
           </a>
 
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/GGeasyOFC/" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Facebook (Hover Blue) -->
+          <a href="https://www.facebook.com/GGeasyOFC/" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-blue-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-facebook"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">FACEBOOK</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-blue-400 transition">FACEBOOK</span>
             </div>
           </a>
         </div>
 
-        <!-- SEÇÃO 3: COMUNIDADE & AVISOS -->
+        <!-- Comunidade e Avisos -->
         <div class="space-y-2.5 pt-1">
           <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-users text-[10px]"></i> COMUNIDADE & AVISOS
           </span>
 
-          <!-- Membro YouTube -->
-          <a href="https://www.youtube.com/channel/UCDUYrtxBX6EXyP5fVLkuJNg/join" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Membro YouTube (Hover Amber/Dourado) -->
+          <a href="https://www.youtube.com/channel/UCDUYrtxBX6EXyP5fVLkuJNg/join" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-amber-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-solid fa-crown text-sm"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">MEMBRO YOUTUBE</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-amber-400 transition">MEMBRO YOUTUBE</span>
             </div>
           </a>
 
-          <!-- WhatsApp (GRUPO) -->
-          <a href="https://chat.whatsapp.com/ESToK8oNT874OR33olNTNv?s=cl&p=i&mlu=4" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- WhatsApp Grupo Oficial (Hover Emerald) -->
+          <a href="https://chat.whatsapp.com/ESToK8oNT874OR33olNTNv?s=cl&p=i&mlu=4" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-emerald-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-whatsapp"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">WHATSAPP (GRUPO)</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-emerald-400 transition">WHATSAPP (GRUPO)</span>
             </div>
           </a>
 
-          <!-- Discord Oficial -->
-          <a href="https://discord.com/invite/SxsAQydnnH" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Servidor Discord Oficial (Hover Indigo) -->
+          <a href="https://discord.com/invite/SxsAQydnnH" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-indigo-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-discord"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">DISCORD OFICIAL</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-indigo-400 transition">DISCORD OFICIAL</span>
             </div>
           </a>
 
-          <!-- Canal do Telegram -->
-          <a href="https://t.me/+rsQ-f7_6i5tlMjhh" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Canal do Telegram (Hover Sky Blue) -->
+          <a href="https://t.me/+rsQ-f7_6i5tlMjhh" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-telegram"></i>
               </div>
               <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">CANAL DO TELEGRAM</span>
@@ -285,36 +317,36 @@
           </a>
         </div>
 
-        <!-- SEÇÃO 4: DOWNLOADS & CONTATO -->
+        <!-- Downloads & Contato Comercial -->
         <div class="space-y-2.5 pt-1">
           <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-download text-[10px]"></i> DOWNLOADS & COMERCIAL
           </span>
 
-          <!-- MEU EMULADOR (MSI) -->
-          <a href="https://drive.google.com/file/d/1cBzQyk6X4p7d1girqyRIVbmzcf60OMgf/view" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- Download do Emulador (Hover Cyan Gamer) -->
+          <a href="https://drive.google.com/file/d/1cBzQyk6X4p7d1girqyRIVbmzcf60OMgf/view" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-cyan-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-solid fa-gamepad text-sm"></i>
               </div>
-              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-sky-400 transition">MEU EMULADOR (MSI)</span>
+              <span class="text-xs font-bold text-white tracking-wide uppercase group-hover:text-cyan-400 transition">MEU EMULADOR (MSI)</span>
             </div>
           </a>
 
-          <!-- E-mail Contato -->
-          <a href="mailto:ramonggramalho@yahoo.com" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-500/50 p-3.5 rounded-2xl flex items-center transition group">
+          <!-- E-mail Comercial (Hover Purple) -->
+          <a href="mailto:ramonggramalho@yahoo.com" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-purple-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-105 transition">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-solid fa-envelope"></i>
               </div>
-              <span class="text-xs font-bold text-white lowercase group-hover:text-sky-400 transition">ramonggramalho@yahoo.com</span>
+              <span class="text-xs font-bold text-white lowercase group-hover:text-purple-400 transition">ramonggramalho@yahoo.com</span>
             </div>
           </a>
         </div>
 
       </section>
 
-      <!-- ABA 2: SOBRE -->
+      <!-- ================= ABA 2: SOBRE / HISTÓRIA ================= -->
       <section id="content-about" class="hidden">
         <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-7 space-y-6">
           
@@ -368,7 +400,7 @@
 
   </main>
 
-  <!-- Script das Abas e Sorteio do Ícone -->
+  <!-- Script das abas e ícone sorteadinho -->
   <script>
     function switchTab(tabName) {
       const tabs = ['links', 'about'];
@@ -387,21 +419,21 @@
       });
     }
 
-    // Lista exclusiva: Ícones de Jogos de PC & Free Fire / Esports
+    // Coleção de ícones de games e Free Fire
     const randomIcons = [
       "fa-solid fa-gamepad",        // Controle Gamer
       "fa-solid fa-fire",           // Fogo / Free Fire
-      "fa-solid fa-crosshairs",     // Mira / FPS / Capa
-      "fa-solid fa-skull",          // Caveira / Kill / Abate
-      "fa-solid fa-trophy",         // Troféu / Campeão Pro League
+      "fa-solid fa-crosshairs",     // Mira / Subir Capa
+      "fa-solid fa-skull",          // Caveira / Kill
+      "fa-solid fa-trophy",         // Troféu / Pro League
       "fa-solid fa-desktop",        // PC Gamer / Emulador
       "fa-solid fa-keyboard",       // Teclado Gamer
       "fa-solid fa-crown",          // Coroa / Booyah!
-      "fa-solid fa-headset",        // Headset de Comunicação
+      "fa-solid fa-headset",        // Fone de Comunicação
       "fa-solid fa-shield-halved"   // Escudo / Colete / Guilda
     ];
 
-    // Sorteia um ícone temático a cada atualização de página (F5)
+    // Sorteia um ícone diferente toda vez que a página carrega
     const iconElement = document.getElementById("random-badge-icon");
     if (iconElement) {
       const chosenIcon = randomIcons[Math.floor(Math.random() * randomIcons.length)];
