@@ -18,14 +18,14 @@
   <meta property="og:url" content="https://ggeasy.com.br/">
   <meta property="og:title" content="GGEASY // Hub Oficial">
   <meta property="og:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
-  <meta property="og:image" content="assets/banner.jpg">
+  <meta property="og:image" content="https://ggeasy.com.br/assets/banner.jpg">
 
   <!-- Prévia para Twitter / X -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ggeasy.com.br/">
   <meta property="twitter:title" content="GGEASY // Hub Oficial">
   <meta property="twitter:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
-  <meta property="twitter:image" content="assets/banner.jpg">
+  <meta property="twitter:image" content="https://ggeasy.com.br/assets/banner.jpg">
   
   <!-- Scripts de estilo e fontes -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -75,6 +75,9 @@
     ::-webkit-scrollbar-track { background: #05070c; }
     ::-webkit-scrollbar-thumb { background: #192438; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
   </style>
 </head>
 <body class="text-slate-100 min-h-screen pb-12 antialiased selection:bg-sky-500 selection:text-black">
@@ -84,7 +87,7 @@
     <div class="neon-pill bg-brand-surface/85 border backdrop-blur-xl px-5 py-1.5 rounded-full flex items-center gap-2.5 transition duration-300">
       
       <!-- O ícone muda a cada F5 através do JavaScript -->
-      <i id="random-badge-icon" class="fa-solid fa-gamepad text-sky-400 text-sm neon-icon animate-pulse"></i>
+      <i id="random-badge-icon" aria-hidden="true" class="fa-solid fa-gamepad text-sky-400 text-sm neon-icon animate-pulse"></i>
 
       <span class="font-extrabold tracking-widest text-xs uppercase text-slate-100">
         <span class="text-sky-400 neon-blue">GG</span>EASY
@@ -106,7 +109,7 @@
         <!-- Foto de perfil com aro neon -->
         <div class="relative mb-4">
           <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-sky-400 via-blue-600 to-cyan-300 shadow-2xl shadow-sky-950/80">
-            <img src="assets/logo.png" alt="GGEASY" class="w-full h-full object-cover rounded-full bg-slate-900">
+            <img src="assets/logo.png" alt="Logo do GGEASY" width="112" height="112" class="w-full h-full object-cover rounded-full bg-slate-900">
           </div>
         </div>
 
@@ -115,12 +118,12 @@
           <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white uppercase text-center">
             <span class="text-sky-400 neon-blue">GG</span>EASY
           </h1>
-          <i class="fa-solid fa-circle-check text-sky-400 text-base absolute -right-6 top-1/2 -translate-y-1/2" title="Verificado Oficial"></i>
+          <i class="fa-solid fa-circle-check text-sky-400 text-base absolute -right-6 top-1/2 -translate-y-1/2" aria-hidden="true"></i>
         </div>
 
         <!-- Cidade e Estado -->
         <div class="flex justify-center items-center gap-1 mt-1.5 text-xs text-slate-300 font-medium">
-          <i class="fa-solid fa-location-dot text-sky-400 text-[10px]"></i>
+          <i aria-hidden="true" class="fa-solid fa-location-dot text-sky-400 text-[10px]"></i>
           <span>João Pessoa, PB</span>
         </div>
 
@@ -131,16 +134,16 @@
 
         <!-- Acessos rápidos às 4 redes principais -->
         <div class="flex justify-center gap-2.5 mt-5">
-          <a href="https://www.instagram.com/ggeasy" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-pink-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+          <a href="https://www.instagram.com/ggeasy" target="_blank" rel="noopener noreferrer" aria-label="Instagram do GGEASY" class="w-10 h-10 bg-brand-surface/90 hover:bg-pink-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-red-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" rel="noopener noreferrer" aria-label="YouTube do GGEASY" class="w-10 h-10 bg-brand-surface/90 hover:bg-red-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
             <i class="fa-brands fa-youtube"></i>
           </a>
-          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-black hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" rel="noopener noreferrer" aria-label="TikTok do GGEASY" class="w-10 h-10 bg-brand-surface/90 hover:bg-black hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
             <i class="fa-brands fa-tiktok"></i>
           </a>
-          <a href="https://livepix.gg/ggeasy" target="_blank" class="w-10 h-10 bg-brand-surface/90 hover:bg-teal-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
+          <a href="https://livepix.gg/ggeasy" target="_blank" rel="noopener noreferrer" aria-label="Apoiar o GGEASY pelo LivePIX" class="w-10 h-10 bg-brand-surface/90 hover:bg-teal-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
             <i class="fa-solid fa-qrcode"></i>
           </a>
         </div>
@@ -149,29 +152,33 @@
     </section>
 
     <!-- Menu de navegação por abas -->
-    <div class="flex justify-center sm:justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
-      <button onclick="switchTab('links')" id="tab-btn-links" class="px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0">
+    <div role="tablist" aria-label="Navegação principal" class="flex justify-center sm:justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
+      <button type="button" role="tab" aria-selected="true" aria-controls="content-links" tabindex="0" onclick="switchTab('links')" id="tab-btn-links" class="px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0">
         <i class="fa-solid fa-link mr-2 text-sky-400"></i> Links
       </button>
-      <button onclick="switchTab('about')" id="tab-btn-about" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
+      <button type="button" role="tab" aria-selected="false" aria-controls="content-shop" tabindex="-1" onclick="switchTab('shop')" id="tab-btn-shop" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
+        <i class="fa-solid fa-shirt mr-2 text-sky-400"></i> Loja
+      </button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="content-about" tabindex="-1" onclick="switchTab('about')" id="tab-btn-about" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
         <i class="fa-solid fa-user mr-2 text-sky-400"></i> Sobre
       </button>
+
     </div>
 
     <!-- Área de conteúdo das abas -->
     <div class="mt-6">
 
       <!-- ================= ABA 1: TODOS OS LINKS ================= -->
-      <section id="content-links" class="space-y-4">
+      <section id="content-links" role="tabpanel" aria-labelledby="tab-btn-links" class="space-y-4">
         
         <!-- Lives e Plataformas de Apoio -->
         <div class="space-y-2.5">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+          <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-tower-broadcast text-[10px]"></i> AO VIVO & APOIO
-          </span>
+          </h2>
 
           <!-- LivePIX (Hover Teal) -->
-          <a href="https://livepix.gg/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-teal-500/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://livepix.gg/ggeasy" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-teal-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-solid fa-qrcode"></i>
@@ -188,7 +195,7 @@
           </a>
 
           <!-- Canal YouTube Lives (Hover Red) -->
-          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-red-500/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-red-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-youtube"></i>
@@ -198,7 +205,7 @@
           </a>
 
           <!-- TikTok Lives & Cortes (Hover White) -->
-          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-white/50 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-white/50 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-tiktok"></i>
@@ -208,7 +215,7 @@
           </a>
 
           <!-- Canal Twitch (Hover Purple) -->
-          <a href="https://www.twitch.tv/ggeasyup" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#9146ff]/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.twitch.tv/ggeasyup" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#9146ff]/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-[#9146ff]/10 border border-[#9146ff]/30 flex items-center justify-center text-[#bf94ff] text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-twitch"></i>
@@ -218,7 +225,7 @@
           </a>
 
           <!-- Canal Kick (Hover Neon Green) -->
-          <a href="https://kick.com/ggeasyofc" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#53fc18]/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://kick.com/ggeasyofc" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#53fc18]/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-[#53fc18]/10 border border-[#53fc18]/30 flex items-center justify-center group-hover:scale-105 transition flex-shrink-0 p-2">
                 <svg viewBox="0 0 24 24" fill="#53fc18" class="w-5 h-5">
@@ -230,7 +237,7 @@
           </a>
 
           <!-- Kwai Lives & Vídeos (Hover Orange) -->
-          <a href="https://www.kwai.com/@GGeasyOFC" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#ff5000]/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.kwai.com/@GGeasyOFC" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-[#ff5000]/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-[#ff5000]/10 border border-[#ff5000]/30 flex items-center justify-center text-[#ff5000] group-hover:scale-105 transition flex-shrink-0 p-2">
                 <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
@@ -245,12 +252,12 @@
 
         <!-- Redes Sociais Oficiais -->
         <div class="space-y-2.5 pt-1">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+          <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-user-plus text-[10px]"></i> REDES SOCIAIS OFICIAIS
-          </span>
+          </h2>
 
           <!-- Instagram (Hover Pink) -->
-          <a href="https://www.instagram.com/ggeasy" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-pink-500/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.instagram.com/ggeasy" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-pink-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-instagram"></i>
@@ -260,7 +267,7 @@
           </a>
 
           <!-- Facebook (Hover Blue) -->
-          <a href="https://www.facebook.com/GGeasyOFC/" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-blue-500/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.facebook.com/GGeasyOFC/" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-blue-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-facebook"></i>
@@ -272,12 +279,12 @@
 
         <!-- Comunidade e Avisos -->
         <div class="space-y-2.5 pt-1">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+          <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-users text-[10px]"></i> COMUNIDADE & AVISOS
-          </span>
+          </h2>
 
           <!-- Membro YouTube (Hover Amber/Dourado) -->
-          <a href="https://www.youtube.com/channel/UCDUYrtxBX6EXyP5fVLkuJNg/join" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-amber-400/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://www.youtube.com/channel/UCDUYrtxBX6EXyP5fVLkuJNg/join" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-amber-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-solid fa-crown text-sm"></i>
@@ -287,7 +294,7 @@
           </a>
 
           <!-- WhatsApp Grupo Oficial (Hover Emerald) -->
-          <a href="https://chat.whatsapp.com/ESToK8oNT874OR33olNTNv?s=cl&p=i&mlu=4" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-emerald-500/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://chat.whatsapp.com/ESToK8oNT874OR33olNTNv?s=cl&p=i&mlu=4" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-emerald-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -297,7 +304,7 @@
           </a>
 
           <!-- Servidor Discord Oficial (Hover Indigo) -->
-          <a href="https://discord.com/invite/SxsAQydnnH" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-indigo-500/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://discord.com/invite/SxsAQydnnH" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-indigo-500/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-discord"></i>
@@ -307,7 +314,7 @@
           </a>
 
           <!-- Canal do Telegram (Hover Sky Blue) -->
-          <a href="https://t.me/+rsQ-f7_6i5tlMjhh" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-400/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://t.me/+rsQ-f7_6i5tlMjhh" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-sky-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-brands fa-telegram"></i>
@@ -319,12 +326,12 @@
 
         <!-- Downloads & Contato Comercial -->
         <div class="space-y-2.5 pt-1">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
+          <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400 px-1 flex items-center gap-1.5">
             <i class="fa-solid fa-download text-[10px]"></i> DOWNLOADS & COMERCIAL
-          </span>
+          </h2>
 
           <!-- Download do Emulador (Hover Cyan Gamer) -->
-          <a href="https://drive.google.com/file/d/1cBzQyk6X4p7d1girqyRIVbmzcf60OMgf/view" target="_blank" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-cyan-400/60 p-3.5 rounded-2xl flex items-center transition group">
+          <a href="https://drive.google.com/file/d/1cBzQyk6X4p7d1girqyRIVbmzcf60OMgf/view" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border hover:border-cyan-400/60 p-3.5 rounded-2xl flex items-center transition group">
             <div class="flex items-center gap-3.5">
               <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-105 transition flex-shrink-0">
                 <i class="fa-solid fa-gamepad text-sm"></i>
@@ -346,8 +353,53 @@
 
       </section>
 
-      <!-- ================= ABA 2: SOBRE / HISTÓRIA ================= -->
-      <section id="content-about" class="hidden">
+      <!-- ================= ABA 2: LOJA TGG ================= -->
+      <section id="content-shop" role="tabpanel" aria-labelledby="tab-btn-shop" class="hidden" hidden>
+        <div class="space-y-4">
+          <div class="space-y-1 px-1">
+            <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-shirt text-[10px]" aria-hidden="true"></i> CAMISA DA TGG
+            </h2>
+            <p class="text-xs text-brand-muted">Fotos do produto e contato direto para consultar preço e tamanhos.</p>
+          </div>
+
+          <article class="overflow-hidden rounded-3xl border border-brand-border bg-brand-surface shadow-xl">
+            <div class="grid grid-cols-2 gap-2 p-3 sm:grid-cols-3 sm:gap-3 sm:p-4">
+              <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-bg">
+                <img src="assets/camisa-tgg-frente.png" alt="Parte da frente da camisa TGG preta e azul, com logo GG no peito" width="960" height="1280" loading="lazy" class="aspect-[3/4] w-full object-cover">
+                <figcaption class="px-2 py-2 text-center text-[10px] font-semibold text-brand-muted">Frente</figcaption>
+              </figure>
+              <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-bg">
+                <img src="assets/camisa-tgg-costas.png" alt="Parte de trás da camisa TGG preta e azul" width="960" height="1280" loading="lazy" class="aspect-[3/4] w-full object-cover">
+                <figcaption class="px-2 py-2 text-center text-[10px] font-semibold text-brand-muted">Costas</figcaption>
+              </figure>
+              <figure class="overflow-hidden rounded-2xl border border-brand-border bg-brand-bg">
+                <img src="assets/camisa-tgg-manga.png" alt="Detalhe da manga azul da camisa TGG com a frase Tropa do GGEASY" width="960" height="1280" loading="lazy" class="aspect-[3/4] w-full object-cover">
+                <figcaption class="px-2 py-2 text-center text-[10px] font-semibold text-brand-muted">Manga</figcaption>
+              </figure>
+            </div>
+
+            <div class="space-y-4 border-t border-brand-border p-4 sm:p-6">
+              <div>
+                <h3 class="text-lg font-extrabold tracking-tight text-white">CAMISA DA TGG</h3>
+                <p class="mt-1 text-sm text-brand-muted">Preço e tamanhos disponíveis: consulte pelo WhatsApp.</p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <a href="https://wa.me/558388655753?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20camisa%20da%20TGG%20do%20GGEASY.%20Pode%20me%20informar%20o%20pre%C3%A7o%2C%20os%20tamanhos%20dispon%C3%ADveis%20e%20como%20fa%C3%A7o%20para%20comprar%3F" target="_blank" rel="noopener noreferrer" class="flex min-h-12 items-center justify-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-4 py-3 text-center text-xs font-extrabold uppercase tracking-wide text-emerald-300 transition hover:bg-emerald-500/20">
+                  <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i> Perguntar pelo WhatsApp
+                </a>
+                <a href="https://cotacao.melhorenvio.com.br/produto/1e600bd6d3d559b0690dd23b9b11db3cc0d918160ee390df99df22661bf9c2ae583d212cbdb160879ff0790340b673385df08ae2abf0f93521b83a7410c40466" target="_blank" rel="noopener noreferrer" class="flex min-h-12 items-center justify-center gap-2 rounded-xl border border-sky-400/40 bg-sky-500/10 px-4 py-3 text-center text-xs font-extrabold uppercase tracking-wide text-sky-300 transition hover:bg-sky-500/20">
+                  <i class="fa-solid fa-truck-fast text-base" aria-hidden="true"></i> Calcular frete
+                </a>
+              </div>
+              <p class="text-center text-[11px] leading-relaxed text-brand-muted">O cálculo do frete abre no Melhor Envio. Informe seu CEP na página da cotação.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- ================= ABA 3: SOBRE / HISTÓRIA ================= -->
+      <section id="content-about" role="tabpanel" aria-labelledby="tab-btn-about" class="hidden" hidden>
         <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-7 space-y-6">
           
           <div class="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -395,7 +447,7 @@
     <!-- Rodapé -->
     <footer class="mt-12 pt-6 border-t border-brand-border/50 text-center flex flex-col items-center gap-1 text-xs text-brand-muted">
       <span class="font-medium tracking-wide">Ramon "<span class="text-sky-400">GG</span>easy" Ramalho</span>
-      <span class="text-[11px] text-brand-muted/60">© 2026 • Todos os direitos reservados</span>
+      <span class="text-[11px] text-brand-muted/60">© <span id="current-year">2026</span> • Todos os direitos reservados</span>
     </footer>
 
   </main>
@@ -403,21 +455,36 @@
   <!-- Script das abas e ícone sorteadinho -->
   <script>
     function switchTab(tabName) {
-      const tabs = ['links', 'about'];
-      
+      const tabs = ['links', 'about', 'shop'];
+      if (!tabs.includes(tabName)) return;
+
       tabs.forEach(t => {
         const contentEl = document.getElementById(`content-${t}`);
         const btnEl = document.getElementById(`tab-btn-${t}`);
-        
-        if (t === tabName) {
-          contentEl.classList.remove('hidden');
-          btnEl.className = 'px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0';
-        } else {
-          contentEl.classList.add('hidden');
-          btnEl.className = 'px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0';
-        }
+        const isActive = t === tabName;
+
+        contentEl.hidden = !isActive;
+        contentEl.classList.toggle('hidden', !isActive);
+        btnEl.setAttribute('aria-selected', String(isActive));
+        btnEl.tabIndex = isActive ? 0 : -1;
+        btnEl.className = isActive
+          ? 'px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0'
+          : 'px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0';
       });
     }
+
+    document.querySelector('[role="tablist"]')?.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const tabs = [...document.querySelectorAll('[role="tab"]')];
+      const currentIndex = tabs.indexOf(document.activeElement);
+      const nextIndex = event.key === 'Home' ? 0
+        : event.key === 'End' ? tabs.length - 1
+        : (currentIndex + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      switchTab(tabs[nextIndex].id.replace('tab-btn-', ''));
+    });
+    document.getElementById("current-year").textContent = new Date().getFullYear();
 
     // Coleção de ícones de games e Free Fire
     const randomIcons = [
@@ -443,3 +510,6 @@
 
 </body>
 </html>
+
+
+
