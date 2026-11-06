@@ -8,22 +8,22 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='%2338bdf8'><path d='M44 32C44 23.16 36.84 16 28 16H20C11.16 16 4 23.16 4 32V68C4 76.84 11.16 84 20 84H28C36.84 84 44 76.84 44 68V50H26V60H32V70C32 71.1 31.1 72 30 72H18C16.9 72 16 71.1 16 70V30C16 28.9 16.9 28 18 28H30C31.1 28 32 28.9 32 30V36H44V32Z'/><path d='M96 32C96 23.16 88.84 16 80 16H72C63.16 16 56 23.16 56 32V68C56 76.84 63.16 84 72 84H80C88.84 84 96 76.84 96 68V50H78V60H84V70C84 71.1 83.1 72 82 72H70C68.9 72 68 71.1 68 70V30C68 28.9 68.9 28 70 28H82C83.1 28 84 28.9 84 30V36H96V32Z'/></g></svg>">
   
   <!-- Título e dados de busca -->
-  <title>GGEASY // Hub Oficial</title>
-  <meta name="title" content="GGEASY // Hub Oficial">
+  <title>GGEASY</title>
+  <meta name="title" content="GGEASY">
   <meta name="description" content="Streamer oficial de Free Fire. Acesse as transmissões ao vivo, apoie via LivePIX, entre no grupo VIP e confira os links oficiais.">
   <meta name="theme-color" content="#0ea5e9">
 
   <!-- Prévia para compartilhamento no WhatsApp, Insta e Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ggeasyofc.vercel.app/">
-  <meta property="og:title" content="GGEASY // Hub Oficial">
+  <meta property="og:title" content="GGEASY">
   <meta property="og:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
   <meta property="og:image" content="https://ggeasyofc.vercel.app/assets/banner.jpg">
 
   <!-- Prévia para Twitter / X -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ggeasyofc.vercel.app/">
-  <meta property="twitter:title" content="GGEASY // Hub Oficial">
+  <meta property="twitter:title" content="GGEASY">
   <meta property="twitter:description" content="Acesse as lives, apoie via LivePIX, participe da comunidade e confira os links oficiais do GGEASY.">
   <meta property="twitter:image" content="https://ggeasyofc.vercel.app/assets/banner.jpg">
   
@@ -53,11 +53,12 @@
     }
   </script>
 
-  <!-- Efeitos visuais: neon suave e barra de rolagem -->
+  <!-- Identidade visual e pequenos detalhes de interação -->
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #05070c;
+      background-image: radial-gradient(ellipse at 50% -20%, rgba(14, 165, 233, .14), transparent 48%);
     }
     
     .neon-pill {
@@ -71,10 +72,19 @@
       text-shadow: 0 0 12px rgba(56, 189, 248, 0.65);
     }
 
+    .livepix-card {
+      background: linear-gradient(125deg, rgba(13, 148, 136, .2), rgba(12, 17, 26, .97) 48%, rgba(12, 17, 26, .98));
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .28), inset 0 1px rgba(255,255,255,.04);
+    }
+    .livepix-card:hover .livepix-arrow { transform: translate(3px, -3px); }
+    .social-link:hover { transform: translateY(-2px); }
+
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #05070c; }
     ::-webkit-scrollbar-thumb { background: #192438; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+    .no-scrollbar { scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
     }
@@ -82,86 +92,70 @@
 </head>
 <body class="text-slate-100 min-h-screen pb-12 antialiased selection:bg-sky-500 selection:text-black">
 
-  <!-- Tag flutuante com ícone aleatório no topo -->
-  <header class="sticky top-3 z-50 flex justify-center px-4">
-    <div class="neon-pill bg-brand-surface/85 border backdrop-blur-xl px-5 py-1.5 rounded-full flex items-center gap-2.5 transition duration-300">
-      
-      <!-- O ícone muda a cada F5 através do JavaScript -->
-      <i id="random-badge-icon" aria-hidden="true" class="fa-solid fa-gamepad text-sky-400 text-sm neon-icon animate-pulse"></i>
-
-      <span class="font-extrabold tracking-widest text-xs uppercase text-slate-100">
-        <span class="text-sky-400 neon-blue">GG</span>EASY
-      </span>
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-brand-bg/85 px-4 backdrop-blur-xl">
+    <div class="mx-auto flex h-14 max-w-5xl items-center justify-center gap-4">
+      <a href="#inicio" class="font-extrabold tracking-[.18em] text-sm text-white" aria-label="GGEASY, início"><span class="text-sky-400">GG</span>EASY</a>
+      <span class="h-4 w-px bg-sky-400/40" aria-hidden="true"></span>
+      <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[.12em] text-brand-muted">Cola com o <span class="text-sky-400">GG</span></span>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 mt-5">
+  <main id="inicio" class="max-w-5xl mx-auto px-4 mt-6 sm:mt-10">
 
-    <!-- Card principal de apresentação -->
-    <section class="relative rounded-3xl overflow-hidden border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-2xl">
-      
-      <!-- Banner de fundo com sobreposição sutil -->
-      <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('assets/banner.jpg');"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-brand-surface/80 via-brand-bg/90 to-brand-surface"></div>
-      
-      <div class="relative z-10 flex flex-col items-center text-center">
-        
-        <!-- Foto de perfil com aro neon -->
-        <div class="relative mb-4">
-          <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-sky-400 via-blue-600 to-cyan-300 shadow-2xl shadow-sky-950/80">
-            <img src="assets/logo.png" alt="Logo do GGEASY" width="112" height="112" class="w-full h-full object-cover rounded-full bg-slate-900">
+    <!-- LivePIX em primeiro plano; perfil e redes mantêm acesso imediato. -->
+    <section class="relative isolate overflow-hidden rounded-[1.75rem] border border-brand-border bg-brand-surface shadow-2xl shadow-black/30">
+      <div class="absolute inset-0 bg-cover bg-center opacity-[.28]" style="background-image:url('assets/banner.jpg')" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-bg/95 via-brand-bg/70 to-brand-bg/45" aria-hidden="true"></div>
+      <div class="relative grid gap-6 p-5 sm:p-8 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:gap-10 lg:p-10">
+        <div class="flex items-center gap-4 sm:gap-5">
+          <img src="assets/logo.png" alt="Foto do GGEASY" width="128" height="128" class="h-20 w-20 rounded-2xl border border-white/10 bg-slate-900 object-cover shadow-xl sm:h-28 sm:w-28 lg:h-32 lg:w-32">
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"><span class="text-sky-400">GG</span>EASY</h1>
+              <i class="fa-solid fa-circle-check text-sky-400" aria-label="Perfil oficial"></i>
+            </div>
+            <p class="mt-1 text-sm text-slate-300 sm:text-base">João Pessoa, PB</p>
+            <p class="mt-2 max-w-sm text-sm leading-relaxed text-brand-muted sm:text-base">A resenha é ao vivo. Cola com a tropa e manda sua mensagem na live.</p>
           </div>
         </div>
 
-        <!-- Nome e badge de verificado -->
-        <div class="relative inline-flex items-center justify-center">
-          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white uppercase text-center">
-            <span class="text-sky-400 neon-blue">GG</span>EASY
-          </h1>
-          <i class="fa-solid fa-circle-check text-sky-400 text-base absolute -right-6 top-1/2 -translate-y-1/2" aria-hidden="true"></i>
-        </div>
-
-        <!-- Cidade e Estado -->
-        <div class="flex justify-center items-center gap-1 mt-1.5 text-xs text-slate-300 font-medium">
-          <i aria-hidden="true" class="fa-solid fa-location-dot text-sky-400 text-[10px]"></i>
-          <span>João Pessoa, PB</span>
-        </div>
-
-        <!-- Bio rápida -->
-        <p class="text-xs sm:text-sm text-slate-300 max-w-md mt-2.5 leading-relaxed">
-          Streamer e influenciador oficial de Free Fire, eleito Melhor Streamer da Galera.
-        </p>
-
-        <!-- Acessos rápidos às 4 redes principais -->
-        <div class="flex justify-center gap-2.5 mt-5">
-          <a href="https://www.instagram.com/ggeasy" target="_blank" rel="noopener noreferrer" aria-label="Instagram do GGEASY" class="w-10 h-10 bg-brand-surface/90 hover:bg-pink-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/@GGeasyYT" target="_blank" rel="noopener noreferrer" aria-label="YouTube do GGEASY" class="w-10 h-10 bg-brand-surface/90 hover:bg-red-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" rel="noopener noreferrer" aria-label="TikTok do GGEASY" class="w-10 h-10 bg-brand-surface/90 hover:bg-black hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
-          <a href="https://livepix.gg/ggeasy" target="_blank" rel="noopener noreferrer" aria-label="Apoiar o GGEASY pelo LivePIX" class="w-10 h-10 bg-brand-surface/90 hover:bg-teal-600 hover:text-white border border-brand-border rounded-xl flex items-center justify-center text-brand-muted transition text-sm">
-            <i class="fa-solid fa-qrcode"></i>
-          </a>
-        </div>
-        <a href="mailto:ramonggramalho@yahoo.com" aria-label="E-mail comercial: ramonggramalho@yahoo.com" class="mt-3 inline-flex max-w-full items-center gap-1.5 text-xs text-brand-muted transition hover:text-sky-300">
-          <i class="fa-regular fa-envelope text-[11px]" aria-hidden="true"></i>
-          <span>Contato comercial: ramonggramalho@yahoo.com</span>
+        <a href="https://livepix.gg/ggeasy" target="_blank" rel="noopener noreferrer" aria-label="Abrir LivePix do GGEASY para enviar uma mensagem ao vivo" class="livepix-card group relative flex min-h-40 items-center justify-between gap-4 overflow-hidden rounded-2xl border border-teal-400/30 p-5 transition duration-300 hover:-translate-y-0.5 hover:border-teal-300/60 sm:min-h-48 sm:p-7">
+          <div class="absolute -right-10 -top-14 h-44 w-44 rounded-full border border-teal-300/10" aria-hidden="true"></div>
+          <div class="absolute -right-3 -top-7 h-32 w-32 rounded-full border border-teal-300/10" aria-hidden="true"></div>
+          <div class="relative">
+            <span class="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[.2em] text-teal-300"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> Sua mensagem na live</span>
+            <span class="mt-2 block text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Chega no LivePix</span>
+            <span class="mt-1.5 block max-w-xs text-xs leading-relaxed text-slate-300 sm:text-sm">Apoie o GG e mande um salve que pode aparecer ao vivo.</span>
+            <span class="mt-4 inline-flex items-center gap-2 rounded-xl bg-teal-400 px-4 py-2.5 text-xs font-extrabold uppercase tracking-wide text-slate-950 transition group-hover:bg-teal-300">Abrir LivePix <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i></span>
+          </div>
+          <span class="livepix-arrow relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-teal-300/20 bg-teal-300/10 text-xl text-teal-300 transition-transform sm:h-14 sm:w-14" aria-hidden="true"><i class="fa-solid fa-qrcode"></i></span>
         </a>
 
+        <div class="border-t border-white/10 pt-5 lg:col-span-2 lg:pt-6">
+          <span class="block text-center text-[10px] font-bold uppercase tracking-[.16em] text-brand-muted">Segue o GG</span>
+          <div class="mt-3 flex w-full flex-nowrap justify-start gap-2 overflow-x-auto no-scrollbar sm:justify-center" aria-label="Redes sociais do GGEASY">
+            <a href="https://www.instagram.com/ggeasy" target="_blank" rel="noopener noreferrer" aria-label="Instagram do GGEASY" class="social-link inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 text-xs font-semibold text-slate-200 transition hover:border-pink-400/40 hover:text-pink-300"><i class="fa-brands fa-instagram text-sm"></i> Instagram</a>
+            <a href="https://www.youtube.com/@GGeasyYT" target="_blank" rel="noopener noreferrer" aria-label="YouTube do GGEASY" class="social-link inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 text-xs font-semibold text-slate-200 transition hover:border-red-400/40 hover:text-red-300"><i class="fa-brands fa-youtube text-sm"></i> YouTube</a>
+            <a href="https://www.tiktok.com/@ggeasyoficial_" target="_blank" rel="noopener noreferrer" aria-label="TikTok do GGEASY" class="social-link inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 text-xs font-semibold text-slate-200 transition hover:border-white/30 hover:text-white"><i class="fa-brands fa-tiktok text-sm"></i> TikTok</a>
+          </div>
+          <a href="mailto:ramonggramalho@yahoo.com" aria-label="Enviar e-mail para ramonggramalho@yahoo.com" class="mx-auto flex min-h-10 w-full max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-0.5 rounded-lg px-2 text-center text-[11px] text-brand-muted transition hover:text-sky-300 sm:text-xs"><i class="fa-regular fa-envelope shrink-0" aria-hidden="true"></i><span>Contato comercial:</span><span class="break-all text-slate-300">ramonggramalho@yahoo.com</span></a>
+        </div>
       </div>
     </section>
 
     <!-- Menu de navegação por abas -->
-    <div role="tablist" aria-label="Navegação principal" class="flex justify-center sm:justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
+    <div role="tablist" aria-label="Navegação principal" class="flex justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
       <button type="button" role="tab" aria-selected="true" aria-controls="content-links" tabindex="0" onclick="switchTab('links')" id="tab-btn-links" class="px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0">
         <i class="fa-solid fa-link mr-2 text-sky-400"></i> Links
       </button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="content-guild" tabindex="-1" onclick="switchTab('guild')" id="tab-btn-guild" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
+        <i class="fa-solid fa-people-group mr-2 text-sky-400"></i> Guilda
+      </button>
       <button type="button" role="tab" aria-selected="false" aria-controls="content-shop" tabindex="-1" onclick="switchTab('shop')" id="tab-btn-shop" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
         <i class="fa-solid fa-shirt mr-2 text-sky-400"></i> Loja
+      </button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="content-setup" tabindex="-1" onclick="switchTab('setup')" id="tab-btn-setup" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
+        <i class="fa-solid fa-computer mr-2 text-sky-400"></i> Setup
       </button>
       <button type="button" role="tab" aria-selected="false" aria-controls="content-about" tabindex="-1" onclick="switchTab('about')" id="tab-btn-about" class="px-5 py-2.5 rounded-xl hover:text-white transition flex-shrink-0">
         <i class="fa-solid fa-user mr-2 text-sky-400"></i> Sobre
@@ -357,6 +351,89 @@
 
       </section>
 
+      <!-- ================= ABA: GUILDA TGG ================= -->
+      <section id="content-guild" role="tabpanel" aria-labelledby="tab-btn-guild" class="hidden" hidden>
+        <div class="relative isolate overflow-hidden rounded-3xl border border-brand-border bg-brand-surface p-5 sm:p-8">
+          <div class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full border border-sky-400/10" aria-hidden="true"></div>
+          <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full border border-sky-400/10" aria-hidden="true"></div>
+          <div class="relative mx-auto max-w-xl">
+            <div class="mb-5 flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl border border-sky-400/25 bg-sky-400/10 text-sky-300"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+              <div>
+                <h2 class="mt-0.5 text-xl font-extrabold tracking-tight text-white sm:text-2xl">Bora pra TGG?</h2>
+              </div>
+            </div>
+            <div class="mb-5 max-w-lg space-y-2.5">
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-400/25 bg-amber-400/10 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-amber-300"><i class="fa-solid fa-tag" aria-hidden="true"></i> Obrigatório para entrar na guilda</span>
+              <p class="text-sm leading-relaxed text-brand-muted"><strong class="text-white">Pra entrar na guilda, o nick tem que começar com TGG.</strong> Monte o seu aqui embaixo e venha pra família TGG!</p>
+            </div>
+
+            <span class="mb-2 block text-[11px] font-bold uppercase tracking-wider text-slate-300">Escolha o tamanho do espaço</span>
+            <div id="guild-space-options" role="group" aria-label="Tamanho do espaço invisível" class="mb-4 grid grid-cols-3 gap-2">
+              <button type="button" data-space-size="small" aria-pressed="false" class="guild-space-option min-h-10 rounded-lg border border-brand-border bg-brand-bg/70 px-3 text-xs font-bold text-brand-muted transition hover:border-sky-400/40 hover:text-white">Pequeno</button>
+              <button type="button" data-space-size="medium" aria-pressed="false" class="guild-space-option min-h-10 rounded-lg border border-brand-border bg-brand-bg/70 px-3 text-xs font-bold text-brand-muted transition hover:border-sky-400/40 hover:text-white">Médio</button>
+              <button type="button" data-space-size="large" aria-pressed="true" class="guild-space-option min-h-10 rounded-lg border border-sky-400/50 bg-sky-400/10 px-3 text-xs font-bold text-sky-200 transition hover:border-sky-300/60">Grande</button>
+            </div>
+
+            <label for="guild-nickname" class="mb-2 block text-[11px] font-bold uppercase tracking-wider text-slate-300">Seu nick no jogo</label>
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <input id="guild-nickname" type="text" maxlength="24" autocomplete="off" placeholder="Digite seu nick" class="min-h-12 min-w-0 flex-1 rounded-xl border border-brand-border bg-brand-bg px-4 text-sm text-white outline-none placeholder:text-slate-600 focus:border-sky-400/60 focus:ring-2 focus:ring-sky-400/10">
+              <button id="guild-copy-button" type="button" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-sky-400 px-5 text-xs font-extrabold uppercase tracking-wide text-slate-950 transition hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-brand-surface">
+                <i class="fa-regular fa-copy" aria-hidden="true"></i> Copiar nick TGG
+              </button>
+            </div>
+
+            <div class="mt-4 flex items-center justify-between gap-3 rounded-xl border border-white/5 bg-brand-bg/70 px-4 py-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-muted">Prévia</span>
+              <span id="guild-nickname-preview" class="min-w-0 truncate text-sm font-extrabold tracking-wide text-white" aria-label="Prévia do nick da guilda"><span>TGG</span><span id="guild-preview-space" class="inline-block align-baseline overflow-hidden text-transparent" style="width:.95em" aria-hidden="true">ㅤ</span><span id="guild-preview-name" class="text-sky-300">SEU NICK</span></span>
+            </div>
+            <p id="guild-copy-status" class="mt-3 min-h-4 text-center text-xs text-brand-muted" role="status" aria-live="polite"></p>
+            <p class="mt-2 text-center text-[10px] leading-relaxed text-slate-500">O espaço é um caractere especial. Se o jogo não aceitar um tamanho, teste outra opção.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABA: SETUP DO GGEASY ================= -->
+      <section id="content-setup" role="tabpanel" aria-labelledby="tab-btn-setup" class="hidden" hidden>
+        <div class="space-y-5">
+          <div class="flex flex-col gap-2 px-1 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sky-400">Equipamentos do GG</span>
+              <h2 class="mt-1 text-xl font-extrabold tracking-tight text-white sm:text-2xl">Setup de jogo e live</h2>
+              <p class="mt-1 text-sm text-brand-muted">Componentes do PC, periféricos e equipamentos de live.</p>
+            </div>
+          </div>
+
+          <section class="space-y-3" aria-labelledby="setup-pc-heading">
+            <h3 id="setup-pc-heading" class="flex items-center gap-2 px-1 text-[11px] font-extrabold uppercase tracking-wider text-sky-400"><i class="fa-solid fa-microchip" aria-hidden="true"></i> PC</h3>
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-ram.webp" alt="Memória Corsair Dominator Platinum RGB DDR4" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Memória RAM</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Corsair Dominator Platinum RGB DDR4</h4></article>
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-ssd.webp" alt="SSD SanDisk Extreme Pro M.2 de 1 TB" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">SSD</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">SanDisk Extreme Pro M.2 · 1 TB</h4></article>
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-processador.png" alt="Processador Intel Core i9 de 10ª geração" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Processador</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Intel Core i9-10900K</h4></article>
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-placa-video.webp" alt="Placa de vídeo Gainward GeForce RTX 3080 Ti Phoenix" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Placa de vídeo</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Gainward GeForce RTX 3080 Ti Phoenix</h4></article>
+            </div>
+          </section>
+
+          <section class="space-y-3" aria-labelledby="setup-perifericos-heading">
+            <h3 id="setup-perifericos-heading" class="flex items-center gap-2 px-1 text-[11px] font-extrabold uppercase tracking-wider text-sky-400"><i class="fa-solid fa-keyboard" aria-hidden="true"></i> Periféricos</h3>
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-monitor.png" alt="Monitor AOC 24G2U" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Monitor</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">AOC 24G2U</h4></article>
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-mouse.png" alt="Mouse Logitech G502 HERO" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Mouse</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Logitech G502 HERO</h4></article>
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-teclado.png" alt="Teclado Logitech G Pro Keyboard" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Teclado</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Logitech G Pro Keyboard</h4></article>
+            </div>
+          </section>
+
+          <section class="space-y-3" aria-labelledby="setup-streaming-heading">
+            <h3 id="setup-streaming-heading" class="flex items-center gap-2 px-1 text-[11px] font-extrabold uppercase tracking-wider text-sky-400"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> Streaming</h3>
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-microfone.webp" alt="Microfone Blue Yeti" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Microfone</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Blue Yeti</h4></article>
+              <article class="rounded-2xl border border-brand-border bg-brand-surface p-3 transition hover:border-sky-400/30 sm:p-4"><div class="mb-3 flex h-24 items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-brand-bg/80 sm:h-32"><img src="assets/setup-stream-deck.png" alt="Elgato Stream Deck" loading="lazy" decoding="async" class="h-full w-full object-contain p-2"></div><span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400">Controlador</span><h4 class="mt-1 min-h-10 text-sm font-bold leading-snug text-white">Elgato Stream Deck</h4></article>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
       <!-- ================= ABA 2: LOJA TGG ================= -->
       <section id="content-shop" role="tabpanel" aria-labelledby="tab-btn-shop" class="hidden" hidden>
         <div class="space-y-4">
@@ -456,10 +533,10 @@
 
   </main>
 
-  <!-- Script das abas e ícone sorteadinho -->
+  <!-- Navegação acessível entre as abas -->
   <script>
     function switchTab(tabName) {
-      const tabs = ['links', 'about', 'shop'];
+      const tabs = ['links', 'guild', 'shop', 'setup', 'about'];
       if (!tabs.includes(tabName)) return;
 
       tabs.forEach(t => {
@@ -490,26 +567,61 @@
     });
     document.getElementById("current-year").textContent = new Date().getFullYear();
 
-    // Coleção de ícones de games e Free Fire
-    const randomIcons = [
-      "fa-solid fa-gamepad",        // Controle Gamer
-      "fa-solid fa-fire",           // Fogo / Free Fire
-      "fa-solid fa-crosshairs",     // Mira / Subir Capa
-      "fa-solid fa-skull",          // Caveira / Kill
-      "fa-solid fa-trophy",         // Troféu / Pro League
-      "fa-solid fa-desktop",        // PC Gamer / Emulador
-      "fa-solid fa-keyboard",       // Teclado Gamer
-      "fa-solid fa-crown",          // Coroa / Booyah!
-      "fa-solid fa-headset",        // Fone de Comunicação
-      "fa-solid fa-shield-halved"   // Escudo / Colete / Guilda
-    ];
+    const guildInput = document.getElementById('guild-nickname');
+    const guildPreviewSpace = document.getElementById('guild-preview-space');
+    const guildPreviewName = document.getElementById('guild-preview-name');
+    const guildStatus = document.getElementById('guild-copy-status');
+    const guildCopyButton = document.getElementById('guild-copy-button');
+    const guildSpaces = { large: '\u3164', medium: '\u2000', small: '\u205F' };
+    const guildSpaceLabels = { large: 'grande', medium: 'médio', small: 'pequeno' };
+    const guildPreviewWidths = { large: '.95em', medium: '.62em', small: '.34em' };
+    let selectedGuildSpace = 'large';
 
-    // Sorteia um ícone diferente toda vez que a página carrega
-    const iconElement = document.getElementById("random-badge-icon");
-    if (iconElement) {
-      const chosenIcon = randomIcons[Math.floor(Math.random() * randomIcons.length)];
-      iconElement.className = `${chosenIcon} text-sky-400 text-sm neon-icon animate-pulse`;
+    function getGuildNickname() {
+      const nickname = guildInput.value.trim();
+      return nickname ? `TGG${guildSpaces[selectedGuildSpace]}${nickname}` : '';
     }
+
+    guildInput.addEventListener('input', () => {
+      const nickname = guildInput.value.trim();
+      guildPreviewName.textContent = nickname || 'SEU NICK';
+      guildStatus.textContent = '';
+    });
+
+    document.getElementById('guild-space-options').addEventListener('click', event => {
+      const button = event.target.closest('[data-space-size]');
+      if (!button) return;
+      selectedGuildSpace = button.dataset.spaceSize;
+      guildPreviewSpace.textContent = guildSpaces[selectedGuildSpace];
+      guildPreviewSpace.style.width = guildPreviewWidths[selectedGuildSpace];
+      document.querySelectorAll('.guild-space-option').forEach(option => {
+        const isSelected = option === button;
+        option.setAttribute('aria-pressed', String(isSelected));
+        option.className = isSelected
+          ? 'guild-space-option min-h-10 rounded-lg border border-sky-400/50 bg-sky-400/10 px-3 text-xs font-bold text-sky-200 transition hover:border-sky-300/60'
+          : 'guild-space-option min-h-10 rounded-lg border border-brand-border bg-brand-bg/70 px-3 text-xs font-bold text-brand-muted transition hover:border-sky-400/40 hover:text-white';
+      });
+      guildStatus.textContent = `Espaço ${guildSpaceLabels[selectedGuildSpace]} selecionado.`;
+    });
+
+    async function copyGuildNickname() {
+      const guildNickname = getGuildNickname();
+      if (!guildNickname) {
+        guildStatus.textContent = 'Digite seu nick para montar a tag da guilda.';
+        guildInput.focus();
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(guildNickname);
+        guildStatus.textContent = `Nick da TGG com espaço ${guildSpaceLabels[selectedGuildSpace]} copiado! Agora é só colar no jogo.`;
+      } catch {
+        guildStatus.textContent = 'Não consegui copiar automaticamente. Selecione e copie a prévia.';
+      }
+    }
+
+    guildCopyButton.addEventListener('click', copyGuildNickname);
+
   </script>
 
 </body>
