@@ -143,7 +143,11 @@
     </section>
 
     <!-- Menu de navegação por abas -->
-    <div role="tablist" aria-label="Navegação principal" class="flex justify-start gap-2 border-b border-brand-border mt-7 pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
+    <div class="relative mt-7">
+      <button id="tabs-scroll-left" type="button" aria-label="Mostrar abas anteriores" class="absolute left-0 top-1/2 z-10 hidden h-8 w-6 -translate-y-1/2 items-center justify-center text-xs text-sky-400/70 transition hover:text-sky-300" onclick="scrollTabs(-1)">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div id="main-tabs" role="tablist" aria-label="Navegação principal" class="flex justify-start gap-2 border-b border-brand-border pb-1 overflow-x-auto text-xs font-bold uppercase tracking-wider text-brand-muted no-scrollbar">
       <button type="button" role="tab" aria-selected="true" aria-controls="content-links" tabindex="0" onclick="switchTab('links')" id="tab-btn-links" class="px-5 py-2.5 rounded-xl text-white bg-brand-surface border border-brand-border transition flex-shrink-0">
         <i class="fa-solid fa-link mr-2 text-sky-400"></i> Links
       </button>
@@ -160,6 +164,10 @@
         <i class="fa-solid fa-user mr-2 text-sky-400"></i> Sobre
       </button>
 
+      </div>
+      <button id="tabs-scroll-right" type="button" aria-label="Mostrar próximas abas" class="absolute right-0 top-1/2 z-10 hidden h-8 w-6 -translate-y-1/2 items-center justify-center text-xs text-sky-400/70 transition hover:text-sky-300" onclick="scrollTabs(1)">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
     </div>
 
     <!-- Área de conteúdo das abas -->
@@ -564,6 +572,27 @@
       tabs[nextIndex].focus();
       switchTab(tabs[nextIndex].id.replace('tab-btn-', ''));
     });
+
+    const mainTabs = document.getElementById('main-tabs');
+    const tabsScrollLeft = document.getElementById('tabs-scroll-left');
+    const tabsScrollRight = document.getElementById('tabs-scroll-right');
+
+    function updateTabScrollHints() {
+      const maxScroll = mainTabs.scrollWidth - mainTabs.clientWidth;
+      const hasOverflow = maxScroll > 2;
+      tabsScrollLeft.classList.toggle('hidden', !hasOverflow || mainTabs.scrollLeft <= 2);
+      tabsScrollRight.classList.toggle('hidden', !hasOverflow || mainTabs.scrollLeft >= maxScroll - 2);
+    }
+
+    function scrollTabs(direction) {
+      mainTabs.scrollBy({ left: direction * Math.max(mainTabs.clientWidth * 0.7, 120), behavior: 'smooth' });
+    }
+
+    mainTabs.addEventListener('scroll', updateTabScrollHints, { passive: true });
+    window.addEventListener('resize', updateTabScrollHints);
+    window.addEventListener('load', updateTabScrollHints, { once: true });
+    if (document.fonts?.ready) document.fonts.ready.then(updateTabScrollHints);
+    requestAnimationFrame(updateTabScrollHints);
     document.getElementById("current-year").textContent = new Date().getFullYear();
 
     const guildInput = document.getElementById('guild-nickname');
